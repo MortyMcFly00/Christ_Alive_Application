@@ -1,0 +1,64 @@
+Roles:
+  Guest - Not signed in
+  Member - Signed in as standard user
+  Leadership - Moderator and Admin (Permissioned Roles)
+
+Church application MVP requirements:
+
+  System requirements
+    (Must)
+    1. System must support user authentication (sign up, sign in, and sign out)
+    2. System must support role-based access control for Guest, Member, Moderator, and Admin.
+    3. System must enforce authorization so only permitted roles can perform restricted actions.
+    4. System must provide live Services via an embedded third-party source.
+    5. System must provice a Tithing experience vian and embedded third-party source.
+    6. System must provide a video library of prior services and Bible studies via embeddeed video sources.
+    7. System must allow users to filter the video library content based on defined filter options.
+    8. System must provide an event calander visible to members.
+    9. System must allow members to volunteer for events.
+    10. System must provide an announcement board visible to members.
+    11. System must allow any user to submit a prayer request.
+    12. Prayer request must offer an anonymous option.
+    13. System must deliver prayer requests to the church email.
+    14. System must detect when the live service broadast begins and send a push notification to subscribed users.
+    15. System must send at most one "Live has begun" notification per broadcast (no duplicates).
+    16. System must allow users to opt in/ opt out of "live started" push notification.
+
+     (Research action logging, sanitation, supabase ping to keep free teir from going inactive, etc.)
+    
+    (Should)
+    1. System should provide user-friendly fallback when embed fails (Blocked or failed load), including external link to open content.
+    2. System should include basic spam protection for prayer requests (rate limiting/ basic CAPTCHA).
+    3. System shpuld prevent duplicate volunteering signups by the same member for the same event.
+    4. System should display confirmation feedback after prayer request submission and after volunteering.
+   
+    (Could)
+    1. System could allow users to subscribe to additional notification categories (events, announcements).
+    2. System could support bookmarking/ favoriting videos or saving filter presets.
+    3. System could show event volunteer capacity (Slots needed/ filled).
+
+    (Wont)
+    1. System will not process payments natively (Tithing remains through embedded third-party source).
+    2. System will not control or initiate the live broadcast (only detect and notify when it begins).
+    3. System will not store or display prayer requests inside the application (delivery is email-only).
+
+  Guest requirements:
+    1. Guest must be able to view live services.
+    2. Guest must be able to tithe.
+    3. Guest must be able to browse and watch the video library using filters.
+    4. Guest must be able to submit a prayer request (including anonymously).
+
+  Members requirements:
+    1. Members must be able to view the event calander.
+    2. Members must be able to volunteer for an event.
+    3. Member must be able to withdraw/ cancel their volunteer signup.
+
+  Moderator requirements:
+    1. Moderator must be able to add events.
+    2. Moderator must be able to cancel events.
+    3. Moderator must be able to post announcements to the announcement board.
+
+  Admin requirements:
+    1. Admin must be able to update video library (add, edit, remove entries and filter metadata).
+    2. Admin must be able to ban/unban user accounts.
+    3. Admin must be able to edit/remove any events, announcements, and video library entries.
