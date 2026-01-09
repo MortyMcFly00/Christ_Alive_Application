@@ -3,7 +3,7 @@ Roles:
   Member - Signed in as standard user
   Leadership - Moderator and Admin (Permissioned Roles)
 
-Church application MVP requirements:
+Functional Requirements:
 
   System requirements
     (Must)
@@ -62,3 +62,24 @@ Church application MVP requirements:
     1. Admin must be able to update video library (add, edit, remove entries and filter metadata).
     2. Admin must be able to ban/unban user accounts.
     3. Admin must be able to edit/remove any events, announcements, and video library entries.
+
+Non-Functional Requirements:
+
+  Availability Requirements:
+    1. The system must be accessible at all times, with uninterrupted access during live services and Bible studies.
+    2. In the event of unexpected downtime, the application must display a user-friendly error message.
+    3. Planned downtime must be scheduled and communicated to users via an in-app banner at least 24 hours in advance.
+    4.Live streaming and tithing features are considered mission-critical and must have the highest availability guarentees.
+
+  Performance Requirements:
+
+  (These performance goals apply across both peak usage periods (e.g., live services) and off-peak study use.
+   The system should degrade gracefully in poor network conditions without showing blank states or incomplete screens.)
+
+    1. The app must load within 3 seconds on average mobile networks(3G-5G). 
+    2. Screen transitions and UI interactions should respond in under 1 second.
+    3. Prayer request and volunteer submissions should be processed and confirmed with 2 seconds.
+    4. The video library should load its initial content in under 2 seconds, even on 3G.
+    5. Embedded videos (YouTube, Facebook Live) should begin buffering and play within 4 seconds on mobile networks.
+    6. Push notifications for live streams must be delivered within 30 seconds of detection.
+
