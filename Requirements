@@ -83,3 +83,42 @@ Non-Functional Requirements:
     5. Embedded videos (YouTube, Facebook Live) should begin buffering and play within 4 seconds on mobile networks.
     6. Push notifications for live streams must be delivered within 30 seconds of detection.
 
+  Security Requirements:
+    1. All API access must be authenticated using JWTs(managed by Supabase).
+    2. Role-based access must be strictly enforced on both the frontend and backend.
+    3. Prayer requests will not be stored in the system to protect user privacy. Instead, they are delivered directly to the church email.
+    4. Form submissions accessible to guests must be protected from spam through rate limiting and CAPTCHA mechanisms.
+    5. All data must be transmitted over HTTPS.
+    6. Admin and Moderator actions must be logged for audit purposes.
+    7. Inputs from al user-facing forms must be sanitized to prevent common injection attacks.
+    8. The system must avoid exposing internal error messages or stack traces to end users.
+
+  Scalabilty Requirements:
+    1. The system should comfortably support up to 200 active users and occasional usage spikes without degradation.
+    2. The data model must support long-term accumulation of content, such as:
+      - An expanding video library with search/filtering.
+      - A growing event history.
+      - Admin logs for accountability.
+    3. The system architecture should allow for future feature expansion, including:
+      - Study tools and bookmarks.
+      - Enhanced notification preferences.
+      - Calander integration with native mobile apps.
+    4. Backend services (Node.js + Supabase) must remain stateless and modular so that specific components (notification handler, prayer form, video sync) cane be scaled independently as needed.le
+
+  Maintainability Requirements:
+    1. The application must follow a modular structure, where components are separated and loosely coupled.
+    2.The system should remain stable over long periods, with the expectation that after the first 12-24 months of active updates, future changes will focus primarily on bug fixes and minor improvements.
+    3.The codebase should be organized with:
+      - Clear folder structures and naming conventions.
+      - Logical separation between between frontend, backend, and infrastructure concerns.
+      - Role-based components access control.
+    4. Clean code practices must be followed:
+      - Linting and formatting tools in place.
+      - Comments and documentation for complex logic and workflows.
+      - Well-named, self-explanatory variables and functions.
+    5. A basic onboarding guide or README should exist to help future maintainers understand how to:
+      - Run the app locally.
+      - Deploy backend updates.
+      - Connect to Supabase.
+      - Understand the role-based system.
+    6. Updates should follow a non-breaking change philosophy, especially for shared data models and public facing features.
