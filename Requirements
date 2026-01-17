@@ -69,7 +69,7 @@ Non-Functional Requirements:
     1. The system must be accessible at all times, with uninterrupted access during live services and Bible studies.
     2. In the event of unexpected downtime, the application must display a user-friendly error message.
     3. Planned downtime must be scheduled and communicated to users via an in-app banner at least 24 hours in advance.
-    4.Live streaming and tithing features are considered mission-critical and must have the highest availability guarentees.
+    4. Live streaming and tithing features are considered mission-critical and must have the highest availability guarentees.
 
   Performance Requirements:
 
@@ -107,8 +107,8 @@ Non-Functional Requirements:
 
   Maintainability Requirements:
     1. The application must follow a modular structure, where components are separated and loosely coupled.
-    2.The system should remain stable over long periods, with the expectation that after the first 12-24 months of active updates, future changes will focus primarily on bug fixes and minor improvements.
-    3.The codebase should be organized with:
+    2. The system should remain stable over long periods, with the expectation that after the first 12-24 months of active updates, future changes will focus primarily on bug fixes and minor improvements.
+    3. The codebase should be organized with:
       - Clear folder structures and naming conventions.
       - Logical separation between between frontend, backend, and infrastructure concerns.
       - Role-based components access control.
