@@ -1,8 +1,8 @@
 Roles:
   Guest - Not signed in
   Member - Signed in as standard user
-  Leadership - Moderator and Admin (Permissioned Roles)
-
+  Leadership - Moderator (Permissioned Role)
+  Admin - Application Administrator (Unrestricted access)
 Functional Requirements:
 
   System requirements
